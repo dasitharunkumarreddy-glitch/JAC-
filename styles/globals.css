@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  background: #f7efe1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(15, 122, 69, 0.12), transparent 28rem),
+    radial-gradient(circle at bottom right, rgba(184, 138, 42, 0.16), transparent 30rem),
+    linear-gradient(180deg, #fffaf0 0%, #f7efe1 48%, #efe1cb 100%);
+  color: #3b0d12;
+  font-family: var(--font-body), sans-serif;
+}
+
+::selection {
+  background: rgba(184, 138, 42, 0.28);
+  color: #3b0d12;
+}
+
+.section-shell {
+  margin: 0 auto;
+  width: min(1120px, calc(100% - 32px));
+}
+
+.glass-card {
+  border: 1px solid rgba(184, 138, 42, 0.24);
+  background: linear-gradient(145deg, rgba(255, 248, 231, 0.92), rgba(255, 255, 255, 0.72));
+  box-shadow: 0 22px 70px rgba(59, 13, 18, 0.14);
+  backdrop-filter: blur(18px);
+}
+
+.gold-text {
+  background: linear-gradient(135deg, #b88a2a, #f1d98d 48%, #0f7a45);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-button {
+  border: 1px solid rgba(184, 138, 42, 0.55);
+  background: linear-gradient(135deg, #b88a2a, #f3d985 52%, #0f7a45);
+  color: #2b080c;
+  box-shadow: 0 14px 34px rgba(184, 138, 42, 0.24);
+}
+
+.outline-button {
+  border: 1px solid rgba(184, 138, 42, 0.5);
+  background: rgba(255, 250, 240, 0.72);
+  color: #3b0d12;
+}
+
+.masonry {
+  columns: 1;
+  column-gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .masonry {
+    columns: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .masonry {
+    columns: 3;
+  }
+}
+
+.masonry-item {
+  break-inside: avoid;
+}
+
+@keyframes floatY {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+.floating {
+  animation: floatY 5s ease-in-out infinite;
+}
